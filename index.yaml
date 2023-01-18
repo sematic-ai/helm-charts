@@ -12,7 +12,7 @@ entries:
     name: sematic-server
     type: application
     urls:
-    - https://sematic-ai.github.io/helm-charts/sematic-server-1.0.2.tgz
+    - https://sematic-ai.github.io/helm-charts/sematic-server/sematic-server-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v2
     appVersion: v0.22.0
@@ -25,7 +25,7 @@ entries:
     name: sematic-server
     type: application
     urls:
-    - https://sematic-ai.github.io/helm-charts/sematic-server-1.0.1.tgz
+    - https://sematic-ai.github.io/helm-charts/sematic-server/sematic-server-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v2
     appVersion: v0.21.1
