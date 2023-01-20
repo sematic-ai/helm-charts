@@ -40,6 +40,8 @@ auth:
   authorized_email_domain: <fill in>
 ```
 
+More information about these configurations can be found in the [Deploy Sematic guide](https://docs.sematic.dev/cloud-execution/deploy).
+
 ### Available options
 
 | Parameter                                 | Description                                                   | Default                                                 |
