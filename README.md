@@ -17,6 +17,13 @@ Configuration section below, and then run:
 
     helm install sematic-server sematic-ai/sematic-server -f /path/to/values.yml
 
+
+If you have already used Helm to install Sematic in your cluster, you can
+upgrade your installation to the latest version by running:
+
+    helm repo update
+    helm upgrade sematic-server sematic-ai/sematic-server -f /path/to/values.yml
+
 To uninstall the chart:
 
     helm delete sematic-server
