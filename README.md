@@ -5,7 +5,9 @@ Helm's [documentation](https://helm.sh/docs) to get started.
 
 Once Helm has been set up correctly, add the repo as follows:
 
+    ```bash
     helm repo add sematic-ai https://sematic-ai.github.io/helm-charts
+    ```
 
 If you had already added this repo earlier, run `helm repo update` to retrieve
 the latest versions of the packages.  You can then run `helm search repo
@@ -15,18 +17,24 @@ To install the sematic-server chart, you'll need to first configure your
 deployment by filling out a copy of your own `valuse.yml` as described in the
 Configuration section below, and then run:
 
+    ```bash
     helm install sematic-server sematic-ai/sematic-server -f /path/to/values.yml
+    ```
 
 
 If you have already used Helm to install Sematic in your cluster, you can
 upgrade your installation to the latest version by running:
 
+    ```bash
     helm repo update
     helm upgrade sematic-server sematic-ai/sematic-server -f /path/to/values.yml
+    ```
 
 To uninstall the chart:
 
+    ```bash
     helm delete sematic-server
+    ```
 
 ## Configuration
 
