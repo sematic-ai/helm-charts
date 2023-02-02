@@ -84,8 +84,8 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `deployment.autoscaling.target_memoryu_utilization_pct`   | Target memory utilization for autoscaled Sematic server pods  | Not set                                 |
 | `deployment.security_context`                             | Pod security context for Sematic server                       | `{}`                                    |
 | `deployment.security_context.fs_group`                    | Pod security filesystem group for Sematic server              | Not set                                 |
-| `deployment.socketio.dedicated`                           | Starts a separate dedicated Sematic server for Socket I/O     | `false`                                 |
-| `deployment.socketio.address`                             | Cluster-private URL to reach dedicated Socket I/O server      | Not set                                 |
+| `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O     | `false`                                 |
+| `deployment.socket_io.address`                            | Cluster-private URL to reach dedicated Socket I/O server      | Not set                                 |
 | `deployment.container_security_context`                   | Container security context for Sematic server pods            | `{}`                                    |
 | `deployment.liveness_probe`                               | Liveness probe K8S configuration for Sematic server pods      | See default values.yml                  |
 | `deployment.readiness_probe`                              | Readiness probe K8S configuration for Sematic server pods     | See default values.yml                  |
