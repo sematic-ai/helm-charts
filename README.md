@@ -67,8 +67,10 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `aws.storage.bucket`                                      | AWS S3 bucket name for cloud artifacts                        | `my-s3-bucket`                          |
 | `secret.create`                                           | Creates a K8S secret for Postgres URL                         | `true`                                  |
 | `database.url`                                            | Fully qualified Postgres database URL                         | `postgres://postgresql:5432/postgres`   |
+| `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O     | `false`                                 |
 | `deployment.worker_count`                                 | Number of WSGI workers per Sematic server pod (API only)      | `1`                                     |
-|                                                           | `deployment.socket_io.dedicated` must be set to true for this |                                         |
+|                                                           | `deployment.socket_io.dedicated` must be set to true if       |                                         |
+|                                                           | this is greater than 1                                        |                                         |
 | `deployment.replica_count`                                | Number of replica pods for Sematic server                     | `1`                                     |
 | `deployment.affinity`                                     | K8S node affinity for Sematic server pods                     | `{}`                                    |
 | `deployment.annotations`                                  | K8S annotations for Sematic server pods                       | `{}`                                    |
@@ -85,8 +87,6 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `deployment.autoscaling.target_memoryu_utilization_pct`   | Target memory utilization for autoscaled Sematic server pods  | Not set                                 |
 | `deployment.security_context`                             | Pod security context for Sematic server                       | `{}`                                    |
 | `deployment.security_context.fs_group`                    | Pod security filesystem group for Sematic server              | Not set                                 |
-| `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O     | `false`                                 |
-| `deployment.socket_io.address`                            | Cluster-private URL to reach dedicated Socket I/O server      | Not set                                 |
 | `deployment.container_security_context`                   | Container security context for Sematic server pods            | `{}`                                    |
 | `deployment.liveness_probe`                               | Liveness probe K8S configuration for Sematic server pods      | See default values.yml                  |
 | `deployment.readiness_probe`                              | Readiness probe K8S configuration for Sematic server pods     | See default values.yml                  |
