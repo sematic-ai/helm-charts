@@ -67,6 +67,10 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `aws.storage.bucket`                                      | AWS S3 bucket name for cloud artifacts                        | `my-s3-bucket`                          |
 | `secret.create`                                           | Creates a K8S secret for Postgres URL                         | `true`                                  |
 | `database.url`                                            | Fully qualified Postgres database URL                         | `postgres://postgresql:5432/postgres`   |
+| `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O     | `false`                                 |
+| `deployment.worker_count`                                 | Number of WSGI workers per Sematic server pod (API only)      | `1`                                     |
+|                                                           | `deployment.socket_io.dedicated` must be set to true if       |                                         |
+|                                                           | this is greater than 1                                        |                                         |
 | `deployment.replica_count`                                | Number of replica pods for Sematic server                     | `1`                                     |
 | `deployment.affinity`                                     | K8S node affinity for Sematic server pods                     | `{}`                                    |
 | `deployment.annotations`                                  | K8S annotations for Sematic server pods                       | `{}`                                    |
@@ -98,6 +102,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `service.type`                                            | K8S service type for Sematic server service                   | `ClusterIP`                             |
 | `service.port`                                            | K8S service port for Sematic server service                   | `80`                                    |
 | `ingress.create`                                          | Enables creation of K8S ingress for Sematic server            | `false`                                 |
+| `ingress.dashboard_url`                                   | Public dashboard URL to K8S ingress for Sematic server        | Not set                                 |
 | `ingress.class_name`                                      | K8S ingress class name for Sematic server                     | `""`                                    |
 | `ingress.annotations`                                     | K8S ingress annotations for Sematic server                    | `{}`                                    |
 | `ingress.hosts`                                           | K8S ingress hosts YAML spec for Sematic server                | See default values.yml                  |
