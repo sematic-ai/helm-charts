@@ -68,6 +68,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `secret.create`                                           | Creates a K8S secret for Postgres URL                         | `true`                                  |
 | `database.url`                                            | Fully qualified Postgres database URL                         | `postgres://postgresql:5432/postgres`   |
 | `deployment.worker_count`                                 | Number of WSGI workers per Sematic server pod (API only)      | `1`                                     |
+|                                                           | `deployment.socket_io.dedicated` must be set to true for this |                                         |
 | `deployment.replica_count`                                | Number of replica pods for Sematic server                     | `1`                                     |
 | `deployment.affinity`                                     | K8S node affinity for Sematic server pods                     | `{}`                                    |
 | `deployment.annotations`                                  | K8S annotations for Sematic server pods                       | `{}`                                    |
