@@ -68,9 +68,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `secret.create`                                           | Creates a K8S secret for Postgres URL                         | `true`                                  |
 | `database.url`                                            | Fully qualified Postgres database URL                         | `postgres://postgresql:5432/postgres`   |
 | `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O     | `false`                                 |
-| `deployment.worker_count`                                 | Number of WSGI workers per Sematic server pod (API only)      | `1`                                     |
-|                                                           | `deployment.socket_io.dedicated` must be set to true if       |                                         |
-|                                                           | this is greater than 1                                        |                                         |
+| `deployment.worker_count`                                 | Number of WSGI workers per Sematic server pod (API only) `deployment.socket_io.dedicated` must be set to true if this is greater than 1 | `1` |
 | `deployment.replica_count`                                | Number of replica pods for Sematic server                     | `1`                                     |
 | `deployment.affinity`                                     | K8S node affinity for Sematic server pods                     | `{}`                                    |
 | `deployment.annotations`                                  | K8S annotations for Sematic server pods                       | `{}`                                    |
@@ -84,7 +82,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `deployment.autoscaling.min_replicas`                     | Minimum number of replicas for autoscaled Sematic server pods | `1`                                     |
 | `deployment.autoscaling.max_replicas`                     | Maximum number of replicas for autoscaled Sematic server pods | `1`                                     |
 | `deployment.autoscaling.target_cpu_utilization_pct`       | Target CPU utilization for autoscaled Sematic server pods     | `80`                                    |
-| `deployment.autoscaling.target_memoryu_utilization_pct`   | Target memory utilization for autoscaled Sematic server pods  | Not set                                 |
+| `deployment.autoscaling.target_memory_utilization_pct`    | Target memory utilization for autoscaled Sematic server pods  | Not set                                 |
 | `deployment.security_context`                             | Pod security context for Sematic server                       | `{}`                                    |
 | `deployment.security_context.fs_group`                    | Pod security filesystem group for Sematic server              | Not set                                 |
 | `deployment.container_security_context`                   | Container security context for Sematic server pods            | `{}`                                    |
