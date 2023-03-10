@@ -49,6 +49,7 @@ database:
   url: <fill in>
 aws:
   storage_bucket: <fill in>
+  bucket_region: <fill in>
 auth:
   google_oauth_client_id: <fill in>
   authorized_email_domain: <fill in>
@@ -64,7 +65,8 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `auth.google_oauth_client_id`                             | Google OAuth client id                                        | `xxxxxxxx.apps.googleusercontent.com`   |
 | `auth.authorized_email_domain`                            | Email domains authorized to login via Google                  | `example.org`                           |
 | `aws.enabled`                                             | Enables cloud storage of artifacts in AWS S3                  | `true`                                  |
-| `aws.storage.bucket`                                      | AWS S3 bucket name for cloud artifacts                        | `my-s3-bucket`                          |
+| `aws.storage_bucket`                                      | AWS S3 bucket name for cloud artifacts                        | `my-s3-bucket`                          |
+| `aws.bucket_name`                                      | AWS region for the S3 bucket                         | `my-s3-region`                          |
 | `secret.create`                                           | Creates a K8S secret for Postgres URL                         | `true`                                  |
 | `database.url`                                            | Fully qualified Postgres database URL                         | `postgres://postgresql:5432/postgres`   |
 | `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O     | `false`                                 |
