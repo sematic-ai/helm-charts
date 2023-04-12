@@ -2,6 +2,19 @@ apiVersion: v1
 entries:
   sematic-server:
   - apiVersion: v2
+    appVersion: v0.28.1
+    created: "2023-04-12T22:14:32.387471531Z"
+    description: Sematic AI Server
+    digest: 3b89840265503f5a8b27ba91dee1746f1c3349a9c222d0154ea8d61a71f7abc7
+    maintainers:
+    - name: sematic-ai
+      url: https://github.com/sematic-ai/sematic/
+    name: sematic-server
+    type: application
+    urls:
+    - https://sematic-ai.github.io/helm-charts/sematic-server/sematic-server-1.1.7.tgz
+    version: 1.1.7
+  - apiVersion: v2
     appVersion: v0.28.0
     created: "2023-04-07T10:38:50.179691-07:00"
     description: Sematic AI Server
@@ -170,4 +183,4 @@ entries:
     urls:
     - https://sematic-ai.github.io/helm-charts/sematic-server/sematic-server-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-07T10:38:50.178617-07:00"
+generated: "2023-04-12T22:14:32.386556694Z"
