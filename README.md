@@ -111,6 +111,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `service.port`                                            | K8S service port for Sematic server service                   | `80`                                    |
 | `ingress.create`                                          | Enables creation of K8S ingress for Sematic server            | `false`                                 |
 | `ingress.sematic_dashboard_url`                           | Public dashboard URL to K8S ingress for Sematic server        | Not set                                 |
+| `ingress.force_ssl`                                       | Forces redirects to HTTPS for Sematic Server even when HTTP is used | `true`                            |
 | `ingress.class_name`                                      | K8S ingress class name for Sematic server                     | `""`                                    |
 | `ingress.annotations`                                     | K8S ingress annotations for Sematic server                    | `{}`                                    |
 | `ingress.hosts`                                           | K8S ingress hosts YAML spec for Sematic server                | See default values.yml                  |
