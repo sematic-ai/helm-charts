@@ -67,6 +67,9 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `aws.enabled`                                             | Enables cloud storage of artifacts in AWS S3                  | `true`                                  |
 | `aws.storage_bucket`                                      | AWS S3 bucket name for cloud artifacts                        | `my-s3-bucket`                          |
 | `aws.bucket_name`                                      | AWS region for the S3 bucket                         | `my-s3-region`                          |
+| `cleaner.enabled`                                            | Activates a cron job that cleans up stray resources and metadata.                         | `true`                                  |
+| `cleaner.crontab`                                            | Cron notation for how often cleaning should be done. Allowed values described in Kubernetes [docs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)                        | `"0-55/5 * * * *"`                                  |
+| `cleaner.ttlSecondsAfterFinished`                                            | Time each cleaner pod should live after it has completed, in seconds.                         | `300`                                  |
 | `secret.create`                                           | Creates a K8S secret for Postgres URL                         | `true`                                  |
 | `database.url`                                            | Fully qualified Postgres database URL                         | `postgres://postgresql:5432/postgres`   |
 | `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O     | `false`                                 |
