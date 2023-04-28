@@ -68,7 +68,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `aws.storage_bucket`                                      | AWS S3 bucket name for cloud artifacts                        | `my-s3-bucket`                          |
 | `aws.bucket_name`                                      | AWS region for the S3 bucket                         | `my-s3-region`                          |
 | `cleaner.enabled`                                            | Activates a cron job that cleans up stray resources and metadata.                         | `true`                                  |
-| `cleaner.crontab`                                            | Cron notation for how often cleaning should be done. Allowed values described in Kubernetes [docs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)                        | `"0-55/5 * * * *"`                                  |
+| `cleaner.crontab`                                            | Cron notation for how often cleaning should be done. Allowed values described in Kubernetes docs[^1]                        | `"0-55/5 * * * *"`                                  |
 | `cleaner.ttlSecondsAfterFinished`                                            | Time each cleaner pod should live after it has completed, in seconds.                         | `300`                                  |
 | `secret.create`                                           | Creates a K8S secret for Postgres URL                         | `true`                                  |
 | `database.url`                                            | Fully qualified Postgres database URL                         | `postgres://postgresql:5432/postgres`   |
@@ -97,7 +97,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `image.tag`                                               | Image tag for Sematic server container images                 | Defaults to version released in chart   |
 | `image.pull_policy`                                       | Image pull policy for Sematic server container images         | `IfNotPresent`                          |
 | `image.pull_secrets`                                      | Image pull secrets for Sematic server container images        | Not set                                 |
-| `ray.enabled`                                             | Enables usage of Ray with Sematic[^1]                         | `false`                                  |
+| `ray.enabled`                                             | Enables usage of Ray with Sematic[^2]                         | `false`                                  |
 | `ray.supports_gpus`                                       | `true` if your Ray workers can use GPUs.                      | `false`                                  |
 | `ray.gpu_node_selector`                                   | The K8s node selector for Ray workers using GPUs              | `{}`                                  |
 | `ray.non_gpu_node_selector`                               | The K8s node selector for Ray workers not using GPUs          | `{}`                                  |
@@ -120,4 +120,5 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `ingress.hosts`                                           | K8S ingress hosts YAML spec for Sematic server                | See default values.yml                  |
 | `ingress.tls`                                             | K8s ingress TLS YAML spec for Sematic server                  | `[]`                                    |
 
-[^1]: This is an "Enterprise Edition" feature. Using this requires that you reach out to Sematic and have a Sematic EE server deployed.
+[^1]: Kubernetes Cron job [docs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+[^2]: This is an "Enterprise Edition" feature. Using this requires that you reach out to Sematic and have a Sematic EE server deployed.
