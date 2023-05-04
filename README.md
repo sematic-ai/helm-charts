@@ -13,8 +13,8 @@ If you had already added this repo earlier, run `helm repo update` to retrieve
 the latest versions of the packages.  You can then run `helm search repo
 sematic` to see the charts.
 
-To install the sematic-server chart, you'll need to first configure your
-deployment by filling out a copy of your own `valuse.yml` as described in the
+To install the `sematic-server` chart, you'll need to first configure your
+deployment by filling out a copy of your own `values.yml` as described in the
 Configuration section below, and then run:
 
 ```bash
