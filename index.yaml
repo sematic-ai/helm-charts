@@ -3,9 +3,9 @@ entries:
   sematic-grafana-dashboards:
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2023-05-04T13:34:26.834868-07:00"
+    created: "2023-05-04T14:43:50.279227-07:00"
     description: Sematic AI Grafana Dashboards
-    digest: 6c4cd55d63412f3f117b271a45782fb42584c73d5396ae56f7093ddbd31265a1
+    digest: 55b51750ced39699e5ea5e9838ead314236f01a3a7a2d8a38e70b6deae9fe070
     maintainers:
     - name: sematic-ai
       url: https://github.com/sematic-ai/sematic/
@@ -236,4 +236,4 @@ entries:
     urls:
     - https://sematic-ai.github.io/helm-charts/sematic-server/sematic-server-1.0.0.tgz
     version: 1.0.0
-generated: "2023-05-04T13:34:26.834454-07:00"
+generated: "2023-05-04T14:43:50.278808-07:00"
