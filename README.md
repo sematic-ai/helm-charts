@@ -105,7 +105,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `ingress.sematic_dashboard_url`                           | Public dashboard URL to K8S ingress for Sematic server                | Not set                                 |
 | `ingress.tls`                                             | K8s ingress TLS YAML spec for Sematic server                          | `[]`                                    |
 | `local_storage.enabled`                                   | Enables using local disk storage for Artifacts for the Sematic server | `false`                                 |
-| `local_Storage.local_storage_path`                        | Sets the local storage path to use for Artifacts                      | `~/.sematic/data`                       |
+| `local_storage.local_storage_path`                        | Sets the local storage path to use for Artifacts                      | `~/.sematic/data`                       |
 | `ray.enabled`                                             | Enables usage of Ray with Sematic[^2]                                 | `false`                                 |
 | `ray.gpu_node_selector`                                   | The K8s node selector for Ray workers using GPUs                      | `{}`                                    |
 | `ray.gpu_resource_request_key`.                           | If GPUs are tracked as a resource by the K8s scheduler, this should be the key used to request a specific number of GPUs. Ex: "nvidia.com/gpu" to structure requests for 2 GPUs as `{"nvidia.com/gpu": 2}`         | `null`                                  |
@@ -117,8 +117,8 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `rbac.manage_ray`                                         | Allows the Sematic server to manage Ray clusters.                     | `false`                                 |
 | `secret.create`                                           | Creates a K8S secret for Postgres URL                                 | `true`                                  |
 | `service_account.annotations`                             | K8S service account annotations for Sematic server                    | `{}`                                    |
-| `service_account.create`                                  | Enables createion of K8S service account for Sematic server           | `true`                                  |
-| `service.create`                                          | Enables creation of K8S service for Sematic server                    | `false`                                 |
+| `service_account.create`                                  | Enables the creation of a K8S service account for Sematic server      | `true`                                  |
+| `service.create`                                          | Enables the creation of a K8S service for Sematic server              | `false`                                 |
 | `service.port`                                            | K8S service port for Sematic server service                           | `80`                                    |
 | `service.type`                                            | K8S service type for Sematic server service                           | `ClusterIP`                             |
 | `slack.enabled`                                           | Enables publishing pipeline failure messages to Slack                 | `false`                                 |
