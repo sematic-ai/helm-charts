@@ -85,6 +85,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `deployment.liveness_probe`                               | Liveness probe K8S configuration for Sematic server pods              | See default values.yml                  |
 | `deployment.node_selector`                                | K8S node selectors for Sematic server pods                            | `{}`                                    |
 | `deployment.readiness_probe`                              | Readiness probe K8S configuration for Sematic server pods             | See default values.yml                  |
+| `deployment.startup_probe`                                | Startup probe K8S configuration for Sematic server pods               | See default values.yml                  |
 | `deployment.replica_count`                                | Number of replica pods for Sematic server                             | `2`                                     |
 | `deployment.resources.limits.cpu`                         | K8S CPU limit for Sematic server pods                                 | `250m`                                  |
 | `deployment.resources.limits.memory`                      | K8S memory limit for Sematic server pods                              | `2000Mi`                                |
@@ -95,6 +96,8 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O             | `false`                                 |
 | `deployment.tolerations`                                  | K8S tolerations for Sematic server pods                               | `{}`                                    |
 | `deployment.worker_count`                                 | Number of WSGI workers per Sematic server pod (API only) `deployment.socket_io.dedicated` must be set to true if this is greater than 1 | `1`                                     |
+| `github.enabled`                                          | Enables usage of GitHub with Sematic[^2]                              | `false`                                 |
+| `github.github_access_token`                              | The access token Sematic should use to communicate with GitHub APIs   | `github_pat_1234`                       |
 | `image.pull_policy`                                       | Image pull policy for Sematic server container images                 | `IfNotPresent`                          |
 | `image.pull_secrets`                                      | Image pull secrets for Sematic server container images                | Not set                                 |
 | `image.repository`                                        | Image repository for Sematic server container images                  | `sematicai/sematic-server`              |
