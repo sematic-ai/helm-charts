@@ -66,7 +66,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `auth.enabled`                                            | Activates Google OAuth authentication                                 | `true`                                  |
 | `auth.google_oauth_client_id`                             | Google OAuth client id                                                | `xxxxxxxx.apps.googleusercontent.com`   |
 | `auth.authorized_email_domain`                            | Email domains authorized to login via Google                          | `example.org`                           |
-| `aws.enabled`                                             | Enables cloud storage of artifacts in AWS S3                          | `true`                                  |
+| `aws.enabled`                                             | Enables cloud storage of artifacts in AWS S3. If this is `true`, `gcp.storage.enabled` should be `false` | `true` |
 | `aws.storage_bucket`                                      | AWS S3 bucket name for cloud artifacts                                | `my-s3-bucket`                          |
 | `aws.bucket_name`                                         | AWS region for the S3 bucket                                          | `my-s3-region`                          |
 | `cleaner.enabled`                                         | Activates a cron job that cleans up stray resources and metadata      | `true`                                  |
@@ -96,6 +96,11 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O             | `false`                                 |
 | `deployment.tolerations`                                  | K8S tolerations for Sematic server pods                               | `{}`                                    |
 | `deployment.worker_count`                                 | Number of WSGI workers per Sematic server pod (API only) `deployment.socket_io.dedicated` must be set to true if this is greater than 1 | `1`                                     |
+| `gcp.service_account.enabled`                             | Enables usage of a GCP service account by the server. The service account should be stored in a K8s secret. Note that if you are using a workload identity on GCP, you don't need this. | `false` |
+| `gcp.service_account.file`                                | The key within the K8s secret that holds the GCP SA for the server to use. | `the-key.json`                     |
+| `gcp.service_account.name`                                | The name of the K8s secret that holds the GCP SA for the server to use. | `gcp-sa`                              |
+| `gcp.storage.bucket`                                      | The name of the GCS bucket to use for storage,                        | Not set                                 |
+| `gcp.storage.enabled`                                     | Enables usage of GCS for storage. If this is `true`, `aws.enabled` should be `false` | `false`                    |
 | `github.enabled`                                          | Enables usage of GitHub with Sematic[^2]                              | `false`                                 |
 | `github.github_access_token`                              | The access token Sematic should use to communicate with GitHub APIs   | `github_pat_1234`                       |
 | `image.pull_policy`                                       | Image pull policy for Sematic server container images                 | `IfNotPresent`                          |
