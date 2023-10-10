@@ -134,6 +134,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `slack.enabled`                                           | Enables publishing pipeline failure messages to Slack                 | `false`                                 |
 | `slack.slack_webhook_token`                               | A webhook token to use to publish messages to a specific channel      | Not set                                 |
 | `worker.can_customize_security_context`                   | Whether the Function pods can specify custom Security Contexts        | `false`                                 |
+| `worker.can_mount_host_paths`                             | whether the Function pods can mount underlying Kubernetes node paths  | `false`                                 |
 | `worker.service_account.name`                             | Sematic worker service account name                                   | `default`                               |
 
 [^1]: Kubernetes Cron job [docs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
