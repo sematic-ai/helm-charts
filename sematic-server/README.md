@@ -93,7 +93,6 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `deployment.resources.requests.memory`                    | K8S memory requests for Sematic server pods                           | `2000Mi`                                |
 | `deployment.security_context`                             | Pod security context for Sematic server                               | `{}`                                    |
 | `deployment.security_context.fs_group`                    | Pod security filesystem group for Sematic server                      | Not set                                 |
-| `deployment.socket_io.dedicated`                          | Starts a separate dedicated Sematic server for Socket I/O             | `false`                                 |
 | `deployment.tolerations`                                  | K8S tolerations for Sematic server pods                               | `{}`                                    |
 | `deployment.worker_count`                                 | Number of WSGI workers per Sematic server pod (API only) `deployment.socket_io.dedicated` must be set to true if this is greater than 1 | `1`                                     |
 | `gcp.service_account.enabled`                             | Enables usage of a GCP service account by the server. The service account should be stored in a K8s secret. Note that if you are using a workload identity on GCP, you don't need this. | `false` |
@@ -128,7 +127,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `secret.create`                                           | Creates a K8S secret for Postgres URL                                 | `true`                                  |
 | `service_account.annotations`                             | K8S service account annotations for Sematic server                    | `{}`                                    |
 | `service_account.create`                                  | Enables the creation of a K8S service account for Sematic server      | `true`                                  |
-| `service.create`                                          | Enables the creation of a K8S service for Sematic server              | `false`                                 |
+| `service.create`                                          | Enables the creation of a K8S service for Sematic server              | `true`                                  |
 | `service.port`                                            | K8S service port for Sematic server service                           | `80`                                    |
 | `service.type`                                            | K8S service type for Sematic server service                           | `ClusterIP`                             |
 | `slack.enabled`                                           | Enables publishing pipeline failure messages to Slack                 | `false`                                 |
