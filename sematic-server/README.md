@@ -132,6 +132,8 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `service.type`                                            | K8S service type for Sematic server service                           | `ClusterIP`                             |
 | `slack.enabled`                                           | Enables publishing pipeline failure messages to Slack                 | `false`                                 |
 | `slack.slack_webhook_token`                               | A webhook token to use to publish messages to a specific channel      | Not set                                 |
+| `worker.allowed_annotation_keys`                          | Keys for K8s annotations that pipeline authors can use for runs       | `[]`                                    |
+| `worker.allowed_label_keys`                               | Keys for K8s labels that pipeline authors can use for runs            | `[]`                                    |
 | `worker.can_customize_security_context`                   | Whether the Function pods can specify custom Security Contexts        | `false`                                 |
 | `worker.can_mount_host_paths`                             | whether the Function pods can mount underlying Kubernetes node paths  | `false`                                 |
 | `worker.service_account.name`                             | Sematic worker service account name                                   | `default`                               |
