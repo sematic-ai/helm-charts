@@ -116,9 +116,13 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `local_storage.enabled`                                   | Enables using local disk storage for Artifacts for the Sematic server | `false`                                 |
 | `local_storage.local_storage_path`                        | Sets the local storage path to use for Artifacts                      | `~/.sematic/data`                       |
 | `ray.enabled`                                             | Enables usage of Ray with Sematic[^2]                                 | `false`                                 |
+| `ray.gpu_annotations`                                     | Keys and values of this object will be used to supply annotations for Ray head/worker nodes when the nodes have GPUs | `{}`|
+| `ray.gpu_labels`                                          | Keys and values of this object will be used to supply labels for Ray head/worker nodes when the nodes have GPUs | `{}`|
 | `ray.gpu_node_selector`                                   | The K8s node selector for Ray workers using GPUs                      | `{}`                                    |
-| `ray.gpu_resource_request_key`.                           | If GPUs are tracked as a resource by the K8s scheduler, this should be the key used to request a specific number of GPUs. Ex: "nvidia.com/gpu" to structure requests for 2 GPUs as `{"nvidia.com/gpu": 2}`         | `null`                                  |
+| `ray.gpu_resource_request_key`                            | If GPUs are tracked as a resource by the K8s scheduler, this should be the key used to request a specific number of GPUs. Ex: "nvidia.com/gpu" to structure requests for 2 GPUs as `{"nvidia.com/gpu": 2}`         | `null`                                  |
 | `ray.gpu_tolerations`.                                    | List of K8s tolerations for Ray workers using GPUs                    | `[]`                                    |
+| `ray.non_gpu_annotations`                                 | Keys and values of this object will be used to supply annotations for Ray head/worker nodes when the nodes have NO GPUs | `{}`|
+| `ray.non_gpu_labels`                                      | Keys and values of this object will be used to supply labels for Ray head/worker nodes when the nodes have NO GPUs | `{}`|
 | `ray.non_gpu_node_selector`                               | The K8s node selector for Ray workers not using GPUs                  | `{}`                                    |
 | `ray.non_gpu_tolerations`.                                | List of K8s tolerations for Ray workers not using GPUs                | `[]`                                    |
 | `ray.supports_gpus`                                       | `true` if your Ray workers can use GPUs                               | `false`                                 |
