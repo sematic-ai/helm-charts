@@ -100,7 +100,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `gcp.service_account.name`                                | The name of the K8s secret that holds the GCP SA for the server to use. | `gcp-sa`                              |
 | `gcp.storage.bucket`                                      | The name of the GCS bucket to use for storage,                        | Not set                                 |
 | `gcp.storage.enabled`                                     | Enables usage of GCS for storage. If this is `true`, `aws.enabled` should be `false` | `false`                    |
-| `github.enabled`                                          | Enables usage of GitHub with Sematic[^2]                              | `false`                                 |
+| `github.enabled`                                          | Enables usage of GitHub with Sematic                                  | `false`                                 |
 | `github.github_access_token`                              | The access token Sematic should use to communicate with GitHub APIs   | `github_pat_1234`                       |
 | `image.pull_policy`                                       | Image pull policy for Sematic server container images                 | `IfNotPresent`                          |
 | `image.pull_secrets`                                      | Image pull secrets for Sematic server container images                | Not set                                 |
@@ -115,7 +115,7 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `ingress.tls`                                             | K8s ingress TLS YAML spec for Sematic server                          | `[]`                                    |
 | `local_storage.enabled`                                   | Enables using local disk storage for Artifacts for the Sematic server | `false`                                 |
 | `local_storage.local_storage_path`                        | Sets the local storage path to use for Artifacts                      | `~/.sematic/data`                       |
-| `ray.enabled`                                             | Enables usage of Ray with Sematic[^2]                                 | `false`                                 |
+| `ray.enabled`                                             | Enables usage of Ray with Sematic                                     | `false`                                 |
 | `ray.gpu_annotations`                                     | Keys and values of this object will be used to supply annotations for Ray head/worker nodes when the nodes have GPUs | `{}`|
 | `ray.gpu_labels`                                          | Keys and values of this object will be used to supply labels for Ray head/worker nodes when the nodes have GPUs | `{}`|
 | `ray.gpu_node_selector`                                   | The K8s node selector for Ray workers using GPUs                      | `{}`                                    |
@@ -143,4 +143,3 @@ More information about these configurations can be found in the [Deploy Sematic 
 | `worker.service_account.name`                             | Sematic worker service account name                                   | `default`                               |
 
 [^1]: Kubernetes Cron job [docs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
-[^2]: This is an "Enterprise Edition" feature. Using this requires that you reach out to Sematic and have a Sematic EE server deployed.
